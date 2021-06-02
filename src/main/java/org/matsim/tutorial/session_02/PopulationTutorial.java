@@ -1,4 +1,4 @@
-package org.matsim.tutorial;
+package org.matsim.tutorial.session_02;
 
 import org.matsim.api.core.v01.Coord;
 import org.matsim.api.core.v01.Id;
