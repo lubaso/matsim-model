@@ -49,6 +49,11 @@
 			<id>slimjars</id>
 			<url>https://mvn.slimjars.com</url>
 		</repository>
+		<!-- Repository for MATSim Berlin Scenario -->
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
 	</repositories>
 
 	<dependencies>
@@ -125,7 +130,11 @@
 			<version>${matsim.version}</version>
 		</dependency>
 		<!--Dependencies from where stated above to here are added as a service; they can be removed if you don't need them-->
-
+		<dependency>
+			<groupId>com.github.matsim-scenarios</groupId>
+			<artifactId>matsim-berlin</artifactId>
+			<version>5.5.3</version>
+		</dependency>
 	</dependencies>
 
 	<build>
