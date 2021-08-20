@@ -14,12 +14,16 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * TODO
+ * initialize CSV_FILE as args
+ */
 
 public class GenerateTrajectory implements LinkEnterEventHandler, LinkLeaveEventHandler, ActivityEndEventHandler, ActivityStartEventHandler, PersonDepartureEventHandler, PersonArrivalEventHandler, PersonLeavesVehicleEventHandler, PersonEntersVehicleEventHandler {
 
     private Network network;
     List<Object[]> data = new ArrayList<>();
-    public static final String CSV_FILE = "./trajectory_data.csv";
+    public static final String CSV_FILE = "scenarios/berlin/output/trajectory_data.csv";
 
     public GenerateTrajectory(Network network) {
         this.network = network;

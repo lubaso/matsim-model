@@ -12,7 +12,7 @@ import org.matsim.core.utils.io.IOUtils;
 
 import java.net.URL;
 
-public class RunEvents {
+public class RunEventsSiouxFalls {
 
     public static final String outputDirectory = "output/siouxFalls";
 
