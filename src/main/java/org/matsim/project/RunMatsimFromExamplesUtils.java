@@ -13,21 +13,31 @@ import java.net.URL;
 
 class RunMatsimFromExamplesUtils{
 
+	public static final String outputDirectory = "scenarios/siouxFalls/output";
+
 	public static void main(String[] args) {
 
-		URL context = org.matsim.examples.ExamplesUtils.getTestScenarioURL("equil");
-		URL url = IOUtils.extendUrl(context, "config.xml");
+		URL context = org.matsim.examples.ExamplesUtils.getTestScenarioURL("siouxfalls-2014");
+		URL url = IOUtils.extendUrl(context, "config_default.xml");
 
 		Config config = ConfigUtils.loadConfig(url);
+		config.controler().setLastIteration(500);
+		config.controler().setOutputDirectory(outputDirectory);
 		config.controler().setOverwriteFileSetting(OverwriteFileSetting.deleteDirectoryIfExists);
+
+		// possibly modify config here
 
 		// ---
 
 		Scenario scenario = ScenarioUtils.loadScenario(config);
 
+		// possibly modify scenario here
+
 		// ---
 
 		Controler controler = new Controler(scenario);
+
+		// possibly modify controler here
 
 		// ---
 
